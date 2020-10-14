@@ -67,8 +67,29 @@ b{
 
 }
 
+.in-stock{
+    color:green;
+}
+.out-of-stock{
+    color:red;
+}
+.few-in-stock{
+    color:orange;
+}
+
+.notify-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:150px;
+    border:1px solid orange;
+    background-color: #fff;
+}
+
+
 @media only screen and (max-width: 614px) {
-    .cart-btn{
+    .cart-btn,.notify-btn{
         width:100px;
         font-size:8px;
         margin:0;

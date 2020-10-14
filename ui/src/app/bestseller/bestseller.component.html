@@ -13,7 +13,19 @@
                     <p>{{bestseller.carType}}</p>
                 </div>
                 <div>
-                    <p>Stock <i class="fa fa-check-circle in-stock" aria-hidden="true"></i>
+                    <p>Stock 
+                        <!-- <i class="fa fa-check-circle in-stock" aria-hidden="true"></i> -->
+                        <span *ngIf="bestseller.stock==='in'">
+                            <i class="fa fa-check-circle in-stock" aria-hidden="true"></i>
+                        </span>
+                        <span *ngIf="bestseller.stock==='few'">
+                            <i class="fa fa-exclamation-circle few-in-stock" aria-hidden="true"></i>
+                            <p><b>Back in 8 days</b></p>
+                        </span>
+                        <span *ngIf="bestseller.stock==='out'">
+                            <i class="fa fa-times-circle out-of-stock" aria-hidden="true"></i>
+                            <p class="out-of-stock"><b>Back in 1 week!</b></p>
+                        </span>
                     </p>
                     <p>Price ${{bestseller.price}}</p>
                 </div>
@@ -32,9 +44,13 @@
             <button type="button" class="btn btn-secondary">{{bestseller.qty}}</button>
             <button type="button" class="btn btn-light"(click)="increase()">+</button>
           </div>
-        <button class="btn cart-btn">
+          <button class="btn cart-btn" *ngIf="bestseller.stock !== 'out'">
             <i class="fa fa-cart-plus" aria-hidden="true"></i>
             <b>Add to Cart</b>
+        </button>
+        <button class="btn notify-btn" *ngIf="bestseller.stock === 'out'">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <b>Notify Me!!</b>
         </button>
     </div>
 </div>

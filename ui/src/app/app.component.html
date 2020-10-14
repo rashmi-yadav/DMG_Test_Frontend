@@ -3,7 +3,7 @@
 <p class="h3">Recommended Products</p>
 <app-filter class="filter"></app-filter>
 <hr>
-<div class="bestseller d-flex flex-wrap">
+<div class="bestseller d-flex">
 <app-bestseller *ngFor="let bestseller of bestsellers" [bestseller]="bestseller"></app-bestseller>
 </div>
 <hr>
@@ -13,4 +13,5 @@
         <app-bestseller class="small" [bestseller]="product"></app-bestseller>
     </div>
 </div>
+<button class="load-btn">Load More Results</button>
 </div>

@@ -4,8 +4,13 @@
 .small{
     display:none;
 }
-
-
+.load-btn{
+    width:100%;
+    border-radius: 25px;
+    background-color: inherit;
+    padding:1em;
+    border-color: #000;
+}
 @media only screen and (max-width: 614px) {
     .filter{
         display: none;

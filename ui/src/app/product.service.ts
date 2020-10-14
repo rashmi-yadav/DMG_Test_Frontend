@@ -33,7 +33,7 @@ export class ProductService {
       qty:4,
       price:340,
       total:1350,
-      stock:"few",
+      stock:"in",
       type:"Economic",
       bestseller:true
     },

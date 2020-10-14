@@ -1,4 +1,6 @@
+
 .card{
+    margin:0.5em 0em;
     padding:1em;
 }
 
@@ -12,7 +14,7 @@
 }
 
 .margin{
-    margin:0em 1em;
+    margin:0em 0em;
 }
 .boder{
     border:1px solid black;
@@ -29,4 +31,24 @@
 b{
     font-size:12px;
 
+}
+
+.in-stock{
+    color:green;
+}
+.out-of-stock{
+    color:red;
+}
+.few-in-stock{
+    color:orange;
+}
+
+.notify-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:150px;
+    border:1px solid orange;
+    background-color: #fff;
 }
