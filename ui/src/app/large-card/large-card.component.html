@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="d-flex one justify-content-between">
+        <p class="title">{{product.title}}</p>
+        <img class="brand" src="../../assets/brand.png" alt="">
+        <p class="margin">{{product.no}}</p>
+        <p class="margin">{{product.carType}}</p>
+        <p class="margin">
+            Stock 
+            <i class="fa fa-check-circle in-stock" aria-hidden="true"></i>
+        </p>
+        <p class="">Price ${{product.price}}</p>
+        <p class="">Total ${{product.total}}</p>
+        <div class="btn-group border " role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-light"(click)="decrease()">-</button>
+            <button type="button" class="btn btn-secondary">{{product.qty}}</button>
+            <button type="button" class="btn btn-light"(click)="increase()">+</button>
+        </div>
+        <button class="btn cart-btn ">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            <b>Add to Cart</b>
+        </button>
+    </div>
+</div>

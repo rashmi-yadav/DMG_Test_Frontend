@@ -1,13 +1,25 @@
-.container1{
-    padding:2em;
+.container-fluid{
+    padding:1em;
+}
+.small{
+    display:none;
 }
 
-.btn{
-    width:100%;
-    border-radius:25px;
-    border:1px solid #000;
-    font-weight: bold;
-    padding:10px 0em;
-    margin:1em;
-    background-color: inherit;
+
+@media only screen and (max-width: 614px) {
+    .filter{
+        display: none;
+    }
+    .container-fluid{
+        padding:0em;
+    }
+    .bestseller{
+        overflow-x: scroll;
+    }
+    .large{
+        display:none;
+    }
+    .small{
+        display: flex;
+    }
 }

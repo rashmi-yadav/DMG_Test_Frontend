@@ -1,10 +1,16 @@
 <app-header></app-header>
-<div class="container1">
-    <p class="h3">Recommended Products</p>
-    <app-filter class="p-1"></app-filter>
-    <hr />
-    <app-bestseller></app-bestseller>
-    <hr>
-    <app-product-view></app-product-view>
-    <button class="btn">Load More Results</button>
+<div class="container-fluid">
+<p class="h3">Recommended Products</p>
+<app-filter class="filter"></app-filter>
+<hr>
+<div class="bestseller d-flex flex-wrap">
+<app-bestseller *ngFor="let bestseller of bestsellers" [bestseller]="bestseller"></app-bestseller>
+</div>
+<hr>
+<div class="d-flex flex-column flex-wrap">
+    <div *ngFor="let product of products">
+        <app-large-card class="large" [product]="product"></app-large-card>
+        <app-bestseller class="small" [bestseller]="product"></app-bestseller>
+    </div>
+</div>
 </div>

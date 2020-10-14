@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import  {product} from '../product.service'
 
-interface product {
+interface product1 {
   title:string;
   no:string;
   carType:string;
@@ -17,42 +18,20 @@ interface product {
   styleUrls: ['./bestseller.component.css']
 })
 export class BestsellerComponent implements OnInit {
-  products:product[];
-  no:number = 4;
+  @Input() bestseller: product;
   constructor() {
-    this.products = [
-      {
-        title:"Continental PremiumContact",
-        no:"195/55 R15 85V",
-        carType:"SUV",
-        qty:4,
-        price:340,
-        total:1350,
-        stock:"in",
-        type: "Premium"
-      },
-      {
-        title:"Continental PremiumContact",
-        no:"195/55 R15 85V",
-        carType:"SUV",
-        qty:4,
-        price:340,
-        total:1350,
-        stock:"few",
-        type:"Economic"
-      },
-    ]
+    
   }
 
 
-  increase(i){
-    this.products[i].qty = this.products[i].qty + 1;
+  increase(){
+    this.bestseller.qty = this.bestseller.qty + 1;
   }
 
-  decrease(i){
-    this.products[i].qty = this.products[i].qty - 1;
-    if(this.products[i].qty <=0)
-    this.products[i].qty = 0;
+  decrease(){
+    this.bestseller.qty = this.bestseller.qty - 1;
+    if(this.bestseller.qty <=0)
+    this.bestseller.qty = 0;
   }
 
   ngOnInit(): void {

@@ -8,6 +8,7 @@ import { FilterComponent } from './filter/filter.component';
 import { BestsellerComponent } from './bestseller/bestseller.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { CommonModule } from '@angular/common';
+import { LargeCardComponent } from './large-card/large-card.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,14 @@ import { CommonModule } from '@angular/common';
     FilterComponent,
     BestsellerComponent,
     ProductViewComponent,
+    LargeCardComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

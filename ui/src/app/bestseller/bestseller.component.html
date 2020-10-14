@@ -1,41 +1,40 @@
-<div class="d-flex flex-row top">
-    <div class="card d-flex flex-row" *ngFor="let p of products;index as i">
-        <p class="banner">{{p.type}} Bestseller</p>
+<div class="card">
+    <p *ngIf="bestseller.bestseller" class="banner"> {{bestseller.type}} Bestseller</p>
+    <div class="d-flex">
         <div class="left">
-            <img src="../../assets/bestseller/tire.jpg" alt="">
-            <img src="../../assets/bestseller/imgs/Image 43@2x.png" class="tag" alt="">
+            <img src="../../assets/tire.png" alt="">
         </div>
         <div class="right">
-        <!-- <app-info [flag]="true"></app-info> -->
-
-        <p class="h1">Continental-Contiecocontact 5</p>
-        <div class="d-flex flex-row">
-            <img src="../../assets/bestseller/imgs/Logo_OE_Approved_-1.png" alt="">
-            <div class="info">
-                <div class="row">
-                    <div class="col">205/55 R16 </div>
-                    <div class="col">Stock</div>
-                    <div class="col">Total</div>
-                    <div class="w-100"></div>
-                    <div class="col">SUV</div>
-                    <div class="col">Price $340</div>
-                    <div class="col">$1,350</div>
-                  </div>
+            <p class="title">{{bestseller.title}}</p>
+            <div class="d-flex">
+                <img src="../../assets/brand.png" alt="">
+                <div>
+                    <p>{{bestseller.no}}</p>
+                    <p>{{bestseller.carType}}</p>
+                </div>
+                <div>
+                    <p>Stock <i class="fa fa-check-circle in-stock" aria-hidden="true"></i>
+                    </p>
+                    <p>Price ${{bestseller.price}}</p>
+                </div>
+                <div>
+                    <p>Total</p> ${{bestseller.total}}
+                </div>
             </div>
+            
         </div>
-        <div class="d-flex flex-row justify-content-between bottom-btn">
-            <div class="btn-group border" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light"(click)="decrease(i)">-</button>
-                <button type="button" class="btn btn-secondary">{{p.qty}}</button>
-                <button type="button" class="btn btn-light"(click)="increase(i)">+</button>
-              </div>
-            <button class="btn cart-btn">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                <b>Add to Cart</b>
-            </button>
-        </div>
+        
+    </div>
 
-
-        </div>
-    </div> 
+    <div class="d-flex flex-row bottom-btn">
+        <div class="btn-group border" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-light"(click)="decrease()">-</button>
+            <button type="button" class="btn btn-secondary">{{bestseller.qty}}</button>
+            <button type="button" class="btn btn-light"(click)="increase()">+</button>
+          </div>
+        <button class="btn cart-btn">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            <b>Add to Cart</b>
+        </button>
+    </div>
 </div>
