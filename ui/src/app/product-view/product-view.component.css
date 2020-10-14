@@ -1,0 +1,58 @@
+.tag{
+    margin-left:-31px;
+    /* margin-top:30px; */
+    height:60px;
+}
+.left,.right{
+    padding:10px;
+}
+
+.card{
+    width:100%;
+    padding:1em;
+    margin:1em;
+}
+
+.title{
+    font-weight: bold;
+    /* text-decoration: underline; */
+   
+    width:200px;
+}
+.no{
+     /* border:1px solid black; */
+    width:120px;
+
+}
+.price-btn{
+    height:45px;
+}
+
+.cart-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:150px;
+    background-color: orange;
+}
+
+.notify-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:150px;
+    border:1px solid orange;
+    background-color: #fff;
+}
+
+.in-stock{
+    color:green;
+}
+.out-of-stock{
+    color:red;
+}
+.few-in-stock{
+    color:orange;
+}

@@ -8,18 +8,16 @@ interface product {
   price:number;
   total:number;
   stock:string;
-  type:String;
 }
 
 @Component({
-  selector: 'app-bestseller',
-  templateUrl: './bestseller.component.html',
-  styleUrls: ['./bestseller.component.css']
+  selector: 'app-product-view',
+  templateUrl: './product-view.component.html',
+  styleUrls: ['./product-view.component.css']
 })
-export class BestsellerComponent implements OnInit {
+export class ProductViewComponent implements OnInit {
   products:product[];
-  no:number = 4;
-  constructor() {
+  constructor() { 
     this.products = [
       {
         title:"Continental PremiumContact",
@@ -29,7 +27,6 @@ export class BestsellerComponent implements OnInit {
         price:340,
         total:1350,
         stock:"in",
-        type: "Premium"
       },
       {
         title:"Continental PremiumContact",
@@ -39,26 +36,28 @@ export class BestsellerComponent implements OnInit {
         price:340,
         total:1350,
         stock:"few",
-        type:"Economic"
       },
+      {
+        title:"Continental PremiumContact",
+        no:"195/55 R15 85V",
+        carType:"SUV",
+        qty:4,
+        price:340,
+        total:1350,
+        stock:"out",
+      }
     ]
   }
-
-
-  increase(i){
-    this.products[i].qty = this.products[i].qty + 1;
-  }
-
-  decrease(i){
+  decrease(i:number){
     this.products[i].qty = this.products[i].qty - 1;
     if(this.products[i].qty <=0)
     this.products[i].qty = 0;
   }
-
+  increase(i:number){
+    this.products[i].qty = this.products[i].qty + 1;
+    
+  }
   ngOnInit(): void {
   }
-  
-
-  
 
 }

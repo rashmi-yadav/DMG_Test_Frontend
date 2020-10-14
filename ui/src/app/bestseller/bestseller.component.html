@@ -1,9 +1,41 @@
-<div class="card d-flex flex-row">
-    <div class="left">
-        <img src="../../assets/bestseller/tire.jpg" alt="">
-        <img src="../../assets/bestseller/imgs/Image 43@2x.png" class="tag" alt="">
-    </div>
-    <div class="right">
-    <app-info></app-info>
-    </div>
+<div class="d-flex flex-row top">
+    <div class="card d-flex flex-row" *ngFor="let p of products;index as i">
+        <p class="banner">{{p.type}} Bestseller</p>
+        <div class="left">
+            <img src="../../assets/bestseller/tire.jpg" alt="">
+            <img src="../../assets/bestseller/imgs/Image 43@2x.png" class="tag" alt="">
+        </div>
+        <div class="right">
+        <!-- <app-info [flag]="true"></app-info> -->
+
+        <p class="h1">Continental-Contiecocontact 5</p>
+        <div class="d-flex flex-row">
+            <img src="../../assets/bestseller/imgs/Logo_OE_Approved_-1.png" alt="">
+            <div class="info">
+                <div class="row">
+                    <div class="col">205/55 R16 </div>
+                    <div class="col">Stock</div>
+                    <div class="col">Total</div>
+                    <div class="w-100"></div>
+                    <div class="col">SUV</div>
+                    <div class="col">Price $340</div>
+                    <div class="col">$1,350</div>
+                  </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-between bottom-btn">
+            <div class="btn-group border" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-light"(click)="decrease(i)">-</button>
+                <button type="button" class="btn btn-secondary">{{p.qty}}</button>
+                <button type="button" class="btn btn-light"(click)="increase(i)">+</button>
+              </div>
+            <button class="btn cart-btn">
+                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                <b>Add to Cart</b>
+            </button>
+        </div>
+
+
+        </div>
+    </div> 
 </div>

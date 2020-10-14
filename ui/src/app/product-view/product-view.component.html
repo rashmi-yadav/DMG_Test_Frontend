@@ -1,0 +1,36 @@
+
+<div class="card d-flex flex-row justify-content-around align-items-center" *ngFor="let product of products;index as i">
+    <p class="title"> {{product.title}} <sup>TM</sup> 6</p>
+    <div><img src="../../assets/bestseller/imgs/Logo_OE_Approved_-1.png" alt=""></div>
+    <p class="no">{{product.no}} {{product.carType}}</p>
+    <p>Stock 
+        <!-- class="fa fa-check-circle" -->
+        <!-- <i [ngClass]="{'fa fa-check-circle' : product.stock==='in','out-of-stock fa icon-remove-circle' : product.stock==='out','few-in-stock fa fa-exclamation-circle' : product.stock==='few'}" aria-hidden="true"></i></p> -->
+        <span *ngIf="product.stock==='in'">
+            <i class="fa fa-check-circle in-stock" aria-hidden="true"></i>
+        </span>
+        <span *ngIf="product.stock==='few'">
+            <i class="fa fa-exclamation-circle few-in-stock" aria-hidden="true"></i>
+        </span>
+        <span *ngIf="product.stock==='out'">
+            <i class="fa fa-times-circle out-of-stock" aria-hidden="true"></i>
+        </span>
+    <p>Price ${{product.price}} </p>
+    <div class="btn-group price-btn" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-light" (click)="decrease(i)">-</button>
+        <button type="button" class="btn btn-secondary">{{product.qty}}</button>
+        <button type="button" class="btn btn-light" (click)="increase(i)">+</button>
+    </div>
+    <p>Total ${{product.total}} </p>
+    <div>
+        <button class="btn cart-btn" *ngIf="product.stock !== 'out'">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            <b>Add to Cart</b>
+        </button>
+        <button class="btn notify-btn" *ngIf="product.stock === 'out'">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <b>Notify Me!!</b>
+        </button>
+    </div>
+   
+</div>

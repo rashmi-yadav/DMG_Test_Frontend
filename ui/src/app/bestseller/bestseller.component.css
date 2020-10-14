@@ -10,4 +10,71 @@
 .card{
     width:48%;
     padding:1em;
+    margin:0em 0.5em;
 }
+
+.banner{
+    /* border:1px solid #000; */
+    background-color: orange;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+    z-index: 2500;
+}
+
+
+.top{
+    margin:1em;
+}
+
+/* info */
+.boder{
+    border:1px solid black;
+}
+
+.h1{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size:20px;
+}
+p{
+    font-size:12px;
+}
+
+.info{
+    margin-left:5px;
+}
+
+.img{
+    width:10px;
+    height:auto;
+}
+
+.col-sm{
+    border:1px solid #000;
+}
+
+.bottom-btn{
+    /* border:1px solid black; */
+    padding-top:10px;
+    width:85%;
+}
+
+.cart-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:120px;
+    background-color: orange;
+}
+b{
+    font-size:12px;
+
+}
+
+.container{
+    max-width: 460px;
+}
+
