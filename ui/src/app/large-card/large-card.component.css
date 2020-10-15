@@ -49,6 +49,7 @@ b{
     align-items: center;
     justify-content: space-around;
     width:150px;
+    max-width:150px;
     border:1px solid orange;
     background-color: #fff;
 }

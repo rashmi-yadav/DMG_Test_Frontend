@@ -49,6 +49,11 @@
     font-size:10px;
 }
 
+img{
+    width:2em;
+}
+
+input:focus {outline: none; }
 
 
 @media only screen and (max-width: 614px) {
