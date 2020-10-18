@@ -1,10 +1,12 @@
 <div class="card">
-    <div class="d-flex one justify-content-between">
-        <p class="title">{{product.title}}</p>
+    <div class="d-flex one justify-content-between align-items-center">
+        <p class="title">{{product.title}}<span><sup>TM</sup></span>6</p>
         <img class="brand" src="../../assets/brand.png" alt="">
-        <p class="" >{{product.no}}</p>
-        <p class="">{{product.carType}}</p>
-        <p class="">
+        <p class="" >
+            {{product.no}} <br>
+            {{product.carType}}
+        </p>
+        <p class="stock">
             Stock 
             <!-- <i class="fa fa-check-circle in-stock" aria-hidden="true"></i> -->
 
@@ -23,12 +25,13 @@
 
         </p>
         <p class="">Price ${{product.price}}</p>
-        <p class="">Total ${{product.total}}</p>
-        <div class="btn-group border " role="group" aria-label="Basic example">
+        <div class="btn-group btn-border" role="group" aria-label="Basic example"> 
             <button type="button" class="btn btn-light"(click)="decrease()">-</button>
-            <button type="button" class="btn btn-secondary">{{product.qty}}</button>
+            <button type="button" class="btn bg-color">{{product.qty}}</button>
             <button type="button" class="btn btn-light"(click)="increase()">+</button>
         </div>
+        <p class="">Total $<b style="font-size:16px">{{product.total}}</b></p>
+
         <button class="btn cart-btn" *ngIf="product.stock !== 'out'">
             <i class="fa fa-cart-plus" aria-hidden="true"></i>
             <b>Add to Cart</b>

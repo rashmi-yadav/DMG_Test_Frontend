@@ -1,9 +1,9 @@
 <app-header></app-header>
-<div class="container-fluid">
+<div class="container">
 <p class="h3">Recommended Products</p>
 <app-filter class="filter"></app-filter>
 <hr>
-<div class="bestseller d-flex">
+<div class="bestseller d-flex justify-content-between">
 <app-bestseller *ngFor="let bestseller of bestsellers" [bestseller]="bestseller"></app-bestseller>
 </div>
 <hr>

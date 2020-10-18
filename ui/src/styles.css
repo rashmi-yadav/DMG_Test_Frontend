@@ -2,3 +2,26 @@
 body{
     background-color:lightgray;
 }
+
+.btn-border{
+    max-height: 40px;
+}
+
+.notify-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:120px;
+    border:2px solid orange;
+    background-color: #fff;
+}
+
+.cart-btn{
+    border-radius: 25px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:120px;
+    background-color: orange;
+}

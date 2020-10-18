@@ -1,7 +1,7 @@
 <div class="card">
     <p *ngIf="bestseller.bestseller" class="banner"> {{bestseller.type}} Bestseller</p>
     <div class="d-flex">
-        <div class="left">
+        <div *ngIf="bestseller.bestseller" class="left">
             <img src="../../assets/tire.png" alt="">
         </div>
         <div class="right">
@@ -39,9 +39,9 @@
     </div>
 
     <div class="d-flex flex-row bottom-btn">
-        <div class="btn-group border" role="group" aria-label="Basic example">
+        <div class="btn-group btn-border" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-light"(click)="decrease()">-</button>
-            <button type="button" class="btn btn-secondary">{{bestseller.qty}}</button>
+            <button type="button" class="btn bg-color">{{bestseller.qty}}</button>
             <button type="button" class="btn btn-light"(click)="increase()">+</button>
           </div>
           <button class="btn cart-btn" *ngIf="bestseller.stock !== 'out'">

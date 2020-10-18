@@ -1,5 +1,5 @@
-.container-fluid{
-    padding:1em;
+.container{
+    padding:1em 0em;
 }
 .small{
     display:none;
@@ -11,7 +11,13 @@
     padding:1em;
     border-color: #000;
 }
-@media only screen and (max-width: 614px) {
+@media only screen and (max-width:768px){
+    .bestseller{
+        overflow-x: scroll;
+
+    }
+}
+@media only screen and (max-width: 375px) {
     .filter{
         display: none;
     }

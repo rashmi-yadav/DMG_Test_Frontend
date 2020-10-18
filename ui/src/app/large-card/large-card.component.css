@@ -2,12 +2,19 @@
 .card{
     margin:0.5em 0em;
     padding:1em;
+    height:100px;
+    max-height: 100px;
 }
 
 .title{
     font-weight: bold;
     text-decoration: underline;
     font-size:20px;
+    width:20%;
+}
+.title sup{
+    text-decoration: none;
+    
 }
 .brand{
     height:50px;
@@ -16,40 +23,51 @@
 .margin{
     margin:0em 0em;
 }
-.boder{
-    border:1px solid black;
+
+
+.bg-color{
+    background-color: lightgrey;
 }
 
-.cart-btn{
+/* .cart-btn{
     border-radius: 25px;
     display:flex;
     align-items: center;
     justify-content: space-around;
     width:120px;
     background-color: orange;
-}
+} */
 b{
     font-size:12px;
 
+}
+
+
+.cart-btn b, .notify-btn b{
+    display:flex;
 }
 
 .in-stock{
     color:green;
 }
 .out-of-stock{
-    color:red;
+    color:maroon;
 }
 .few-in-stock{
     color:orange;
 }
 
-.notify-btn{
-    border-radius: 25px;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    width:150px;
-    max-width:150px;
-    border:1px solid orange;
-    background-color: #fff;
+
+
+@media(max-width:1024px){
+     .cart-btn b, .notify-btn b{
+        display:none;
+    }
+    .cart-btn,.notify-btn{
+        width:fit-content;
+        padding:5px 15px;
+    }
+    .title{
+        font-size:15px; 
+        }
 }
